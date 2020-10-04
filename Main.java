@@ -1,11 +1,12 @@
 
+
 class Main {
   public static void main(String[] args) {
 // kindly use appropriate data types for your declaration
    
   
 //declare an array variable and assign the days of the month debtor defaulted,
-	byte []defaultedDays={1,2,3,4,5};
+	byte []defaultedDays={1,67,87,54,98,56,70,21,45};
    
    
 // declare variables of amount the debtor is to pay per day, and amount the debtor paid and assign values to them
@@ -13,25 +14,34 @@ class Main {
    
    
 // declare all the variables needed for your calculations
-	byte daysPaidFor; 
+	byte daysPaidFor=0; 
 	float totaltToPay=0f;
 	float mod;
 	float extra;
 	float leftToPay;
+	byte amountOfDays=0;
+	float temp=amountPaid;
    
    
 // calculate and print total amount the debtor is to pay using for each loop
 	for(byte x:defaultedDays){
 		totaltToPay+=payPerDay;
+		amountOfDays++;
 	}
-	System.out.println("the total amount to pay is:"+totaltToPay);
+	System.out.println("the total amount to pay is:"+totaltToPay+amountOfDays);
    
 
 // calculate the days the debtor paid for and print the days in which was paid for starting from the left to the right of the array. Also check if there was a day that the debtor did not pay the complete amount for that day, if yes, print the day and the amount left to pay for that day. 
-	daysPaidFor=(byte)(amountPaid/payPerDay);
+	for(int i=0;i<amountOfDays;i++){
+		while(temp>payPerDay){
+			temp-=payPerDay;
+			
+		}
+		daysPaidFor++;
+	}
 	System.out.println("the amount of days paid for are "+daysPaidFor+"\n");
 
-	for(int i=0;i<daysPaidFor; i++){
+	for(int i=0;i<amountOfDays; i++){
 		System.out.println("day "+defaultedDays[i]+" was paid for");
 	}
 
@@ -62,5 +72,6 @@ class Main {
 	}
 
 
+  
   }
 }
