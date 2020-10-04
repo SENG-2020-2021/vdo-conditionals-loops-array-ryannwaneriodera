@@ -51,13 +51,11 @@ class Main {
 
 	mod=amountPaid%payPerDay;
 
-	if(mod>0&&mod<payPerDay&&amountPaid<totaltToPay){
+	if(mod>0&&amountPaid<totaltToPay){
 		System.out.println("day "+defaultedDays[daysPaidFor]+" was not completely paid for beacuse only "+mod+" was paid  instead of "+payPerDay);
 	}
 
-	else if(mod>0&&mod<payPerDay&&amountPaid>totaltToPay){
-		
-	}
+
 
 
 // calculate amount the debtor is left to pay if he did not pay complete fees and the days not paid for or  check if the debtor paid extra and the extra amount he paid for, or if he paid the exact amount needed to be paid and print likewise
