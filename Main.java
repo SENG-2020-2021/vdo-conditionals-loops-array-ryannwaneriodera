@@ -10,7 +10,7 @@ class Main {
    
    
 // declare variables of amount the debtor is to pay per day, and amount the debtor paid and assign values to them
-	float payPerDay=348f,amountPaid=17000f;
+	float payPerDay=348f,amountPaid=1700f;
    
    
 // declare all the variables needed for your calculations
