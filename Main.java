@@ -6,11 +6,11 @@ class Main {
    
   
 //declare an array variable and assign the days of the month debtor defaulted,
-	byte []defaultedDays={1,2,3,4,5};
+	byte []defaultedDays={1,2,3,4,5,6,7,8,9,10};
    
    
 // declare variables of amount the debtor is to pay per day, and amount the debtor paid and assign values to them
-	float payPerDay=348f,amountPaid=2000f;
+	float payPerDay=348f,amountPaid=17000f;
    
    
 // declare all the variables needed for your calculations
@@ -52,7 +52,7 @@ class Main {
 	mod=amountPaid%payPerDay;
 
 	if(mod>0&&amountPaid<totaltToPay){
-		System.out.println("day "+defaultedDays[daysPaidFor]+" was not completely paid for beacuse only "+mod+" was paid  instead of "+payPerDay);
+		System.out.println("day "+defaultedDays[daysPaidFor]+" was not completely paid for and you need to pay "+(payPerDay-mod)+" to complete it ");
 	}
 
 
